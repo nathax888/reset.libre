@@ -70,6 +70,7 @@ body {
   overflow-x: hidden;
 }
 img { max-width: 100%; height: auto; display: block; }
+[hidden] { display: none !important; }
 a { color: var(--orange-deep); text-underline-offset: 3px; }
 a:hover { color: var(--ink); }
 :focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 4px; }
@@ -436,8 +437,22 @@ em.serif, .serif-italic { font-family: var(--serif); font-style: italic; font-we
 .help-item a.tel:hover { background: #000; }
 .help-item a.tel { justify-self: start; }
 @media (min-width: 520px) { .help-item { grid-template-columns: 1fr auto; } .help-item a.tel { justify-self: end; } }
-.help-group + .help-group { margin-top: 40px; }
-.help-group h2 { font-size: clamp(1.6rem, 4.6vw, 2.2rem); }
+.help-group + .help-group { margin-top: 32px; }
+.help-group h3 { font-size: clamp(1.35rem, 4vw, 1.6rem); }
+.country > h2 { font-size: clamp(2rem, 6vw, 2.6rem); margin-bottom: .8em; }
+.country + .country { margin-top: 64px; padding-top: 48px; border-top: 1px solid rgba(43, 35, 29, .12); }
+.country-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 40px; font-weight: 600; }
+.country-nav a { padding: 8px 16px; border-radius: 999px; background: var(--cream-2); text-decoration: none; color: var(--ink); }
+.country-nav a:hover { background: var(--sand); }
+
+/* Onglets Belgique / France dans la fenêtre d'aide urgente */
+.country-tabs { display: flex; gap: 8px; margin: 0 0 16px; }
+.country-tabs button {
+  flex: 1; min-height: 44px; border-radius: 999px; cursor: pointer;
+  border: 2px solid var(--night); background: transparent; color: var(--night);
+  font: 600 .95rem var(--sans);
+}
+.country-tabs button[aria-selected="true"] { background: var(--night); color: var(--gold); }
 
 /* Bouton flottant "Besoin d'aide urgente ?" */
 .urgent-pill {

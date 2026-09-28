@@ -100,6 +100,6 @@ Pour vendre la méthode ou facturer l'accompagnement en Belgique, il faut être 
 
 Prévue dans un dossier `/en/` avec la même structure (ex. `en/method/index.html`). Chaque page a déjà une ligne à décommenter dans le `<head>` (`hreflang="en"`) pour dire à Google que les deux versions vont ensemble.
 
-## Numéros d'aide
+## Numéros d'aide (Belgique et France)
 
-Vérifiés en septembre 2026. Ils sont à deux endroits : `aide-urgente/index.html` (liste complète) et `assets/js/main.js` (fenêtre rapide). Si un numéro change, modifie les deux.
+Vérifiés en septembre 2026. Ils sont à deux endroits : `aide-urgente/index.html` (liste complète) et `assets/js/main.js` (fenêtre rapide, avec un onglet Belgique et un onglet France). Si un numéro change, modifie les deux.
