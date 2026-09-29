@@ -131,11 +131,17 @@ em.serif, .serif-italic { font-family: var(--serif); font-style: italic; font-we
 /* ---------- En-tête ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
+  border-bottom: 1px solid rgba(43, 35, 29, .08);
+}
+/* Le flou est posé sur un calque à part : sur l'en-tête lui-même, il empêcherait
+   le menu mobile (position: fixed) de s'ouvrir en plein écran. */
+.site-header::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
   background: rgba(251, 245, 236, .92);
   backdrop-filter: saturate(1.4) blur(10px);
   -webkit-backdrop-filter: saturate(1.4) blur(10px);
-  border-bottom: 1px solid rgba(43, 35, 29, .08);
 }
+.nav-open .site-header::before { background: var(--cream); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); }
 .logo {
   display: inline-flex; align-items: center; gap: 10px;
