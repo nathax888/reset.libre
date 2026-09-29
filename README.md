@@ -10,6 +10,7 @@ Site « statique » : de simples fichiers HTML, sans base de données. Hébergem
 | Accueil | `index.html` |
 | La méthode | `methode/index.html` |
 | Mon histoire | `mon-histoire/index.html` |
+| Le livre (témoignage en cours d'écriture) | `livre/index.html` |
 | Accompagnement | `accompagnement/index.html` |
 | Proches | `proches/index.html` |
 | Contact | `contact/index.html` |
@@ -56,9 +57,9 @@ Si tu changes de formulaire, remplace ce lien partout (rechercher / remplacer da
 - **Case de consentement (RGPD, important)** : ajoute une case à cocher obligatoire :
   « J'accepte que Nathan (RESET) utilise ces informations, y compris ce que je partage sur ma situation, pour me recontacter. Voir la politique de confidentialité. » avec un lien vers la page `/confidentialite/` du site.
 
-## Le formulaire « Préviens-moi » (podcast, méthode pour les proches)
+## Le formulaire « Préviens-moi » (livre, podcast)
 
-C'est un formulaire Netlify Forms (accueil + page Proches). Les emails arrivent dans ton tableau de bord Netlify :
+C'est un formulaire Netlify Forms (accueil + page Le livre). Le champ « interet » te dit si la personne attend le livre ou le podcast. Les emails arrivent dans ton tableau de bord Netlify :
 **Site › Forms › bientot**. Pour les recevoir par email : **Site configuration › Forms › Form notifications › Add notification › Email notification**.
 
 ## Voir le site sur ton ordinateur
