@@ -78,15 +78,20 @@ Puis ouvre http://localhost:8080 dans ton navigateur. Pour arrêter : Ctrl+C.
 1. Crée un compte gratuit sur https://app.netlify.com (connexion avec GitHub).
 2. « Add new site » › « Import an existing project » › GitHub › choisis le dépôt `reset.libre` et la branche principale.
 3. Laisse les réglages par défaut (le fichier `netlify.toml` s'occupe de tout) et clique « Deploy ».
-4. Dans « Site configuration › Change site name », choisis `reset-libre` : ton site sera sur https://reset-libre.netlify.app
+4. Le site est en ligne sur **https://resetlibre.be** (domaine acheté chez one.com, relié à Netlify).
 5. Dans « Forms », active la détection des formulaires (« Enable form detection »), puis redéploie une fois.
 
-## Brancher un nom de domaine (plus tard)
+## Nom de domaine
 
-1. Achète le domaine (ex. `resetlibre.be`) chez un registrar (OVH, Combell, Gandi…) ou directement dans Netlify (« Domain management › Add a domain › Register »).
-2. Dans Netlify : « Domain management › Add a domain » et suis les instructions (Netlify indique les DNS à mettre chez le registrar).
-3. Le HTTPS (cadenas) s'active automatiquement.
-4. Remplace ensuite `https://reset-libre.netlify.app` par ton domaine dans tous les fichiers (rechercher / remplacer), y compris `sitemap.xml` et `robots.txt`.
+Le domaine **resetlibre.be** est acheté chez **one.com** et relié à Netlify par deux réglages DNS (one.com › Paramètres avancés › Paramètres DNS) :
+
+| Type | Nom d'hôte | Valeur | TTL |
+|---|---|---|---|
+| A | (vide) | `75.2.60.5` | 3600 |
+| CNAME | `www` | l'adresse `.netlify.app` du projet | 3600 |
+
+Ne supprime pas ces deux lignes, ni les lignes MX (email). Le HTTPS est géré automatiquement par Netlify.
+L'adresse du site est écrite dans toutes les pages (balises `canonical` et `og:`), dans `sitemap.xml` et dans `robots.txt`.
 
 ## À compléter avant de lancer
 
