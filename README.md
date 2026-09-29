@@ -9,6 +9,7 @@ Site « statique » : de simples fichiers HTML, sans base de données. Hébergem
 |---|---|
 | Accueil | `index.html` |
 | La méthode | `methode/index.html` |
+| Versions gratuites (lien vers le Google Drive) | `gratuit/index.html` |
 | Mon histoire | `mon-histoire/index.html` |
 | Le livre (témoignage en cours d'écriture) | `livre/index.html` |
 | Accompagnement | `accompagnement/index.html` |
