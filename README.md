@@ -94,11 +94,10 @@ Le domaine **resetlibre.be** est acheté chez **one.com** et relié à Netlify p
 Ne supprime pas ces deux lignes, ni les lignes MX (email). Le HTTPS est géré automatiquement par Netlify.
 L'adresse du site est écrite dans toutes les pages (balises `canonical` et `og:`), dans `sitemap.xml` et dans `robots.txt`.
 
-## À compléter avant de lancer
+## À compléter plus tard
 
-Les champs surlignés `[À COMPLÉTER]` dans :
-- `mentions-legales/index.html` : nom de famille, statut, numéro BCE, adresse, email
-- `confidentialite/index.html` : nom, adresse, email, durée de conservation
+- **Numéro d'entreprise (BCE)** : dès que tu es inscrit comme indépendant, ajoute-le dans `mentions-legales/index.html` (section « Qui édite ce site »), avec ton statut et ta situation TVA.
+- **Adresse** : la loi belge demande une adresse géographique complète. Pour l'instant, seule la ville (Namur) est indiquée. Ajoute une adresse complète, ou une adresse de domiciliation, au moment de l'inscription BCE.
 
 Pour vendre la méthode ou facturer l'accompagnement en Belgique, il faut être inscrit comme indépendant (principal ou complémentaire).
 
