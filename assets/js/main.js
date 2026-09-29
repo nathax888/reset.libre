@@ -16,6 +16,12 @@
     });
   }
 
+  // Sections temporaires : masquées automatiquement après la date indiquée dans data-expires
+  document.querySelectorAll('[data-expires]').forEach(function (el) {
+    var end = Date.parse(el.getAttribute('data-expires'));
+    if (!isNaN(end) && Date.now() > end) el.hidden = true;
+  });
+
   // Met en évidence la page en cours dans le menu
   var here = window.location.pathname.replace(/index\.html$/, '');
   document.querySelectorAll('.site-nav li a').forEach(function (a) {

@@ -497,6 +497,28 @@ em.serif, .serif-italic { font-family: var(--serif); font-style: italic; font-we
   border: 0; border-radius: 50%; background: var(--cream-2); cursor: pointer; font-size: 1.4rem; color: var(--ink);
 }
 
+/* ---------- Événement temporaire (session privée) ---------- */
+.event {
+  background: radial-gradient(120% 90% at 85% 10%, rgba(242, 169, 59, .28), transparent 60%), var(--night);
+  color: var(--on-dark);
+}
+.event h2 { color: var(--on-dark); }
+.event .eyebrow { color: var(--gold); }
+.event .lead, .event p { color: var(--on-dark-soft); }
+.event .check-list li { color: var(--on-dark); }
+.event-for { margin-top: 1.2em; font-weight: 600; color: var(--on-dark) !important; }
+.event-inner { display: grid; gap: 32px; align-items: start; }
+.event-date {
+  display: grid; justify-items: center; align-content: center; gap: 2px;
+  width: 150px; padding: 18px 12px; border-radius: 22px;
+  background: var(--grad-sun); color: var(--night); text-align: center;
+  box-shadow: 0 20px 50px -20px rgba(232, 116, 44, .7);
+}
+.event-day, .event-month { font-weight: 700; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; }
+.event-num { font-family: var(--serif); font-size: 4rem; font-weight: 500; line-height: 1; font-variation-settings: "SOFT" 100; }
+.event-hour { margin-top: 8px; padding: 4px 12px; border-radius: 999px; background: var(--night); color: var(--gold); font-weight: 700; font-size: .95rem; }
+@media (min-width: 800px) { .event-inner { grid-template-columns: 190px 1fr; gap: 56px; } .event-date { width: 190px; padding: 26px 12px; } .event-num { font-size: 5rem; } }
+
 /* ---------- Pied de page ---------- */
 .site-footer { background: var(--night); color: var(--on-dark-soft); padding: 64px 0 96px; font-size: .95rem; }
 .site-footer a { color: var(--on-dark); text-decoration: none; }
