@@ -1,0 +1,114 @@
+/* ==========================================================================
+   RESET · Animations (douces, jamais agressives, coupées si l'utilisateur
+   a demandé moins de mouvement)
+   ========================================================================== */
+
+/* ---------- Héros : lever de soleil ---------- */
+.hero--sunrise {
+  background: linear-gradient(180deg, #2E1A13 0%, #5E2E1B 38%, #7A3D24 62%, #B8613A 100%);
+  overflow: hidden;
+}
+.hero--sunrise::before { display: none; }
+.hero--sunrise .container { position: relative; z-index: 2; }
+.sr-sky, .sr-glow, .sr-sun, .sr-horizon, .sr-blob { position: absolute; pointer-events: none; }
+.sr-sky { inset: 0; background: linear-gradient(180deg, rgba(212, 184, 150, 0) 35%, rgba(212, 184, 150, .42) 100%); opacity: 0; animation: sr-fade 4s ease-out .3s forwards; }
+.sr-sun {
+  right: 8%; bottom: -320px; width: 300px; height: 300px; border-radius: 50%;
+  background: radial-gradient(circle, #F6DDB8 0%, #E9B98C 36%, #D08A5C 60%, rgba(184, 97, 58, 0) 72%);
+  filter: blur(1px); animation: sr-rise 3.6s cubic-bezier(.2, .7, .2, 1) .2s forwards;
+}
+.sr-glow {
+  right: -10%; bottom: -420px; width: 900px; height: 620px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(246, 221, 184, .42), transparent);
+  animation: sr-rise 3.6s cubic-bezier(.2, .7, .2, 1) .2s forwards, sr-breathe 7s ease-in-out 4s infinite;
+}
+.sr-horizon { left: 0; right: 0; bottom: 34%; height: 2px; background: linear-gradient(90deg, transparent, rgba(251, 246, 239, .45), transparent); transform: scaleX(0); animation: sr-line 1.8s ease-out 1.4s forwards; }
+.sr-blob { border-radius: 50%; filter: blur(50px); opacity: .5; }
+.sr-blob--a { width: 380px; height: 300px; left: -120px; top: 12%; background: rgba(212, 184, 150, .35); animation: sr-float 14s ease-in-out infinite; }
+.sr-blob--b { width: 300px; height: 260px; right: 20%; top: 4%; background: rgba(184, 97, 58, .45); animation: sr-float 18s ease-in-out -6s infinite; }
+@keyframes sr-fade { to { opacity: 1; } }
+@keyframes sr-rise { to { transform: translateY(var(--rise, -640px)); } }
+@keyframes sr-breathe { 0%, 100% { transform: translateY(var(--rise, -640px)) scale(1); } 50% { transform: translateY(var(--rise, -640px)) scale(1.07); } }
+@keyframes sr-line { to { transform: scaleX(1); } }
+@keyframes sr-float { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(40px, 30px); } }
+@media (max-width: 767px) { .hero--sunrise { --rise: -880px; } .sr-sun { right: 50%; margin-right: -110px; width: 220px; height: 220px; } .sr-glow { right: 50%; margin-right: -450px; } }
+
+/* Titre mot par mot */
+.a-words .w { display: inline-block; opacity: 0; transform: translateY(.6em); filter: blur(6px); animation: a-word .8s cubic-bezier(.2, .7, .2, 1) forwards; }
+@keyframes a-word { to { opacity: 1; transform: none; filter: none; } }
+.a-fade { opacity: 0; animation: a-fadeup .9s cubic-bezier(.2, .7, .2, 1) var(--d, 0s) forwards; }
+@keyframes a-fadeup { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* Bouton qui respire, avec un reflet qui passe */
+.btn-shine { position: relative; overflow: hidden; animation: a-pulse 2.8s ease-in-out 4.5s infinite; }
+.btn-shine::after {
+  content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .35), transparent);
+  transform: skewX(-20deg); animation: a-shine 3.4s ease-in-out 4s infinite;
+}
+@keyframes a-shine { 0% { left: -60%; } 55%, 100% { left: 130%; } }
+@keyframes a-pulse { 0%, 100% { box-shadow: 0 8px 20px -8px rgba(184, 97, 58, .6), 0 0 0 0 rgba(212, 184, 150, .45); } 50% { box-shadow: 0 8px 20px -8px rgba(184, 97, 58, .6), 0 0 0 12px rgba(212, 184, 150, 0); } }
+
+.sr-scroll { position: absolute; left: 50%; bottom: 18px; z-index: 2; width: 26px; height: 42px; margin-left: -13px; border: 2px solid rgba(251, 246, 239, .6); border-radius: 14px; }
+.sr-scroll::before { content: ""; position: absolute; left: 50%; top: 8px; width: 4px; height: 8px; margin-left: -2px; border-radius: 2px; background: var(--cream); animation: a-wheel 1.6s ease-in-out infinite; }
+@keyframes a-wheel { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(12px); } }
+
+/* ---------- Bandeau qui défile ---------- */
+.marquee { background: var(--orange); color: var(--cream); overflow: hidden; white-space: nowrap; padding: 16px 0; font-family: var(--serif); font-weight: 700; font-size: 1.15rem; }
+.marquee-track { display: inline-flex; align-items: center; animation: a-marquee 30s linear infinite; }
+.marquee span { padding: 0 22px; }
+.marquee i { width: 10px; height: 10px; border-radius: 50%; background: var(--sand); flex: none; }
+@keyframes a-marquee { to { transform: translateX(-50%); } }
+
+/* ---------- Apparitions au défilement ---------- */
+.js-anim .reveal { opacity: 0; transform: translateY(40px); transition: opacity .9s cubic-bezier(.2, .7, .2, 1), transform .9s cubic-bezier(.2, .7, .2, 1); }
+.js-anim .reveal.in { opacity: 1; transform: none; }
+.js-anim .stagger > * { opacity: 0; transform: translateY(36px); transition: opacity .8s cubic-bezier(.2, .7, .2, 1), transform .8s cubic-bezier(.2, .7, .2, 1); }
+.js-anim .stagger.in > * { opacity: 1; transform: none; }
+.js-anim .echoes.stagger > * { transform: translateX(-40px); }
+.js-anim .echoes.stagger.in > * { transform: none; }
+
+/* La grande phrase se remplit de couleur pendant qu'on fait défiler */
+.big-quote[data-fill] .fw { color: rgba(43, 36, 32, .18); transition: color .35s ease; }
+.big-quote[data-fill] .fw.on { color: var(--ink); }
+.big-quote[data-fill] strong .fw.on { color: var(--orange-deep); }
+
+/* ---------- Chiffres ---------- */
+.stats-band { background: var(--cream); padding-top: 24px; }
+.stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.stats li { background: #fff; border-radius: var(--radius); padding: 24px 16px; text-align: center; box-shadow: var(--shadow); }
+.stat-num { display: block; font-family: var(--serif); font-weight: 800; font-size: clamp(2.6rem, 8vw, 3.4rem); line-height: 1; color: var(--orange); }
+.stat-label { display: block; margin-top: 8px; font-size: .95rem; color: var(--ink-soft); }
+@media (min-width: 900px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+
+/* ---------- Cartes vivantes ---------- */
+.step, .card { transition: transform .35s ease, box-shadow .35s ease, opacity .8s cubic-bezier(.2, .7, .2, 1); }
+.step:hover, .card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px -22px rgba(122, 61, 36, .45); }
+.step .step-letter { transition: transform .4s cubic-bezier(.3, 1.6, .5, 1); }
+.step:hover .step-letter { transform: scale(1.12) rotate(-6deg); }
+
+/* Photo : léger effet de profondeur */
+[data-parallax] img { will-change: transform; transition: transform .1s linear; }
+
+/* ---------- Fin : soleil + phrase signature qui s'écrit ---------- */
+.final-sun { overflow: hidden; }
+.final-sun .container { position: relative; z-index: 1; }
+.final-sun-disc { position: absolute; left: 50%; bottom: -260px; width: 520px; height: 520px; margin-left: -260px; border-radius: 50%; background: radial-gradient(circle, rgba(251, 246, 239, .55), rgba(251, 246, 239, 0) 70%); transition: transform 1.6s cubic-bezier(.2, .7, .2, 1); }
+.final-sun.in .final-sun-disc { transform: translateY(-120px); }
+.signature { font-family: var(--serif); font-weight: 700; font-style: italic; font-size: clamp(1.1rem, 3.4vw, 1.4rem); color: var(--night); min-height: 2.8em; margin-bottom: 18px; }
+.signature.typing::after { content: "|"; margin-left: 2px; animation: a-blink .8s steps(1) infinite; }
+@keyframes a-blink { 50% { opacity: 0; } }
+
+/* ---------- Moins de mouvement demandé : tout s'affiche directement ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .a-words .w, .a-fade, .sr-sky { opacity: 1 !important; transform: none !important; filter: none !important; }
+  .sr-sun, .sr-glow { transform: translateY(var(--rise, -640px)) !important; }
+  .sr-horizon { transform: none !important; }
+  .js-anim .reveal, .js-anim .stagger > * { opacity: 1 !important; transform: none !important; }
+  .big-quote[data-fill] .fw { color: var(--ink) !important; }
+  .marquee-track { animation: none !important; }
+}
+
+/* Sur le lever de soleil, le bouton principal passe en crème pour bien ressortir */
+.hero--sunrise .btn-primary { background: var(--cream); color: var(--night); }
+.hero--sunrise .btn-primary:hover { background: #fff; color: var(--night); }

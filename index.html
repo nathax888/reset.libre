@@ -20,6 +20,7 @@
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/fonts/poppins-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/anim.css">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "RESET", "description": "Méthode et accompagnement pour sortir de l'addiction, pour les personnes concernées et leurs proches.", "url": "https://resetlibre.be/", "image": "https://resetlibre.be/assets/img/og-image.jpg", "areaServed": "BE", "founder": {"@type": "Person", "name": "Nathan"}, "sameAs": ["https://www.instagram.com/reset.libre/", "https://www.tiktok.com/@reset.libre"]}</script>
 </head>
 <body>
@@ -43,85 +44,76 @@
   </div>
 </header>
 <main id="contenu">
-<section class="hero">
+<section class="hero hero--sunrise">
+  <div class="sr-sky" aria-hidden="true"></div>
+  <div class="sr-glow" aria-hidden="true"></div>
+  <div class="sr-sun" aria-hidden="true"></div>
+  <div class="sr-horizon" aria-hidden="true"></div>
+  <div class="sr-blob sr-blob--a" aria-hidden="true"></div>
+  <div class="sr-blob sr-blob--b" aria-hidden="true"></div>
   <div class="container">
-    <span class="eyebrow">Méthode RESET · Sortir de l'addiction</span>
-    <h1>L'addiction n'est pas ton problème. <em>C'est la solution que tu as trouvée.</em></h1>
-    <p class="lead">Une solution qui a sûrement marché, un temps. Puis qui a commencé à tout prendre. J'ai vécu ça pendant 10 ans. Aujourd'hui, j'aide celles et ceux qui veulent en sortir, et leurs proches.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="https://tally.so/r/44M0qY" target="_blank" rel="noopener">Réserver mon appel gratuit</a>
+    <span class="eyebrow a-fade" style="--d:.9s">Méthode RESET · Sortir de l'addiction</span>
+    <h1 class="a-words" data-words>L'addiction n'est pas ton problème. <em>C'est la solution que tu as trouvée.</em></h1>
+    <p class="lead a-fade" style="--d:2.6s">Une solution qui a sûrement marché, un temps. Puis qui a commencé à tout prendre. J'ai vécu ça pendant 10 ans. Aujourd'hui, j'aide celles et ceux qui veulent en sortir, et leurs proches.</p>
+    <div class="btn-row a-fade" style="--d:3s">
+      <a class="btn btn-primary btn-shine" href="https://tally.so/r/44M0qY" target="_blank" rel="noopener">Réserver mon appel gratuit</a>
       <a class="btn btn-ghost" href="/methode/">Découvrir la méthode</a>
     </div>
-    <p class="btn-note">30 minutes en visio. Gratuit, sans engagement, sans jugement.</p>
+    <p class="btn-note a-fade" style="--d:3.3s">30 minutes en visio. Gratuit, sans engagement, sans jugement.</p>
   </div>
+  <a class="sr-scroll a-fade" style="--d:3.8s" href="#reconnais" aria-label="Descendre"></a>
 </section>
 
-<!-- SESSION PRIVÉE (temporaire) : se masque toute seule après la date indiquée dans data-expires -->
-<section class="section event" id="session-privee" data-expires="2026-10-08T23:00:00+02:00">
-  <div class="container event-inner">
-    <div class="event-date">
-      <span class="event-day">Jeudi</span>
-      <span class="event-num">8</span>
-      <span class="event-month">octobre</span>
-      <span class="event-hour">20h</span>
-    </div>
-    <div>
-      <span class="eyebrow">Session privée RESET</span>
-      <h2>Une soirée pour parler vrai de l'addiction.</h2>
-      <p class="lead">Je t'invite à une session privée, en visio. Je te raconte mon histoire, sans filtre, et je te présente les grandes lignes de la méthode RESET.</p>
-      <ul class="event-perks" aria-label="Infos pratiques">
-        <li>En visio</li>
-        <li>100 % gratuit</li>
-        <li>Caméra pas obligatoire</li>
-        <li>Pas obligé de parler</li>
-        <li>Aucune carte bancaire</li>
-      </ul>
-      <ul class="check-list">
-        <li>Mon parcours : 10 ans d'addiction, et le chemin pour en sortir</li>
-        <li>Les grandes lignes de la méthode RESET</li>
-        <li>Des témoignages</li>
-        <li>Un temps de questions-réponses : tu demandes ce que tu veux</li>
-      </ul>
-      <p class="event-for">Pour les personnes en situation d'addiction, ou qui se posent des questions sur leur consommation.</p>
-      <div class="btn-row"><a class="btn btn-primary" href="https://tally.so/r/81Oz7Y" target="_blank" rel="noopener">Je m'inscris à la session</a></div>
-      <p class="btn-note">Dès ton inscription, tu reçois toutes les infos par email, avec le lien pour rejoindre la communauté WhatsApp RESET.</p>
-      <p class="event-whatsapp"><strong>Important :</strong> rejoins la communauté WhatsApp. C'est là que tout se passe, pour ne rien manquer de la session.</p>
-    </div>
-  </div>
-</section>
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+  <span>Sans jugement</span><i></i><span>Arrêter, c'est le début</span><i></i><span>Derrière, il faut se reconstruire</span><i></i><span>Quelqu'un qui est passé par là</span><i></i>
+  <span>Sans jugement</span><i></i><span>Arrêter, c'est le début</span><i></i><span>Derrière, il faut se reconstruire</span><i></i><span>Quelqu'un qui est passé par là</span><i></i>
+</div></div>
+
+
 
 <section class="section section--dark">
   <div class="container narrow">
     <span class="eyebrow">Tu te reconnais ?</span>
-    <h2>Peut-être que tu te dis déjà une de ces phrases.</h2>
-    <ul class="echoes">
+    <h2 class="reveal">Peut-être que tu te dis déjà une de ces phrases.</h2>
+    <ul class="echoes stagger">
       <li>« C'est la dernière fois. » Encore.</li>
       <li>De l'extérieur, tout va bien. De l'intérieur, tu t'épuises.</li>
       <li>Tu ne sais plus si tu consommes pour faire la fête, ou pour tenir.</li>
       <li>Tu as essayé d'arrêter seul. Ça a tenu quelques jours.</li>
       <li>Tu n'es même pas sûr d'avoir un problème. Mais tu y penses souvent.</li>
     </ul>
-    <p class="lead">Si une de ces phrases te parle, tu n'es pas cassé. Et tu n'es pas seul.</p>
+    <p class="lead reveal">Si une de ces phrases te parle, tu n'es pas cassé. Et tu n'es pas seul.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container narrow">
     <span class="eyebrow">Ce que j'ai compris</span>
-    <p class="big-quote">Derrière chaque addiction, il y a <strong>quelque chose qui fait mal.</strong></p>
+    <p class="big-quote" data-fill>Derrière chaque addiction, il y a <strong>quelque chose qui fait mal.</strong></p>
     <p>Pendant des années, j'ai cru que mon problème, c'était ce que je consommais. En fait, c'était ce que ça m'évitait de ressentir. Le jour où j'ai compris ça, j'ai arrêté de me battre contre moi-même. J'ai commencé à regarder ce qu'il y avait en dessous.</p>
-    <p>C'est tout le principe de RESET. On ne s'attaque pas seulement au produit ou au comportement. On va voir ce qu'il vient combler, et on construit autre chose à la place.</p>
+    <p class="reveal">C'est tout le principe de RESET. On ne s'attaque pas seulement au produit ou au comportement. On va voir ce qu'il vient combler, et on construit autre chose à la place.</p>
+  </div>
+</section>
+
+<section class="section section--tight stats-band">
+  <div class="container">
+    <ul class="stats stagger">
+      <li><span class="stat-num" data-count="10">0</span><span class="stat-label">ans d'addiction</span></li>
+      <li><span class="stat-num" data-count="2">0</span><span class="stat-label">mois en centre, comme patient</span></li>
+      <li><span class="stat-num" data-count="2">0</span><span class="stat-label">ans à y travailler</span></li>
+      <li><span class="stat-num" data-count="5">0</span><span class="stat-label">étapes pour te reconstruire</span></li>
+    </ul>
   </div>
 </section>
 
 <section class="section section--sand">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">La méthode</span>
       <h2>RESET, en 5 étapes</h2>
       <p class="lead">Cinq étapes, dans l'ordre où je les ai vécues. Du concret, des exercices, et une vraie place pour ce que tu ressens.</p>
     </div>
-    <ol class="steps">
+    <ol class="steps stagger">
       <li class="step"><span class="step-letter" aria-hidden="true">R</span><div><h3>Reconnaître</h3><p>Regarder ta consommation en face, sans te juger. Juste voir ce qui est là.</p></div></li>
       <li class="step"><span class="step-letter" aria-hidden="true">É</span><div><h3>Éclaircir</h3><p>Comprendre ce que l'addiction vient calmer, cacher ou remplir chez toi.</p></div></li>
       <li class="step"><span class="step-letter" aria-hidden="true">S</span><div><h3>Sécuriser</h3><p>Poser une routine, un entourage et des repères pour traverser les moments durs.</p></div></li>
@@ -134,10 +126,10 @@
 
 <section class="section">
   <div class="container split">
-    <div class="split-media split-media--sun">
+    <div class="split-media split-media--sun reveal" data-parallax>
       <img src="/assets/img/photos/nathan-accueil.jpg" alt="Portrait de Nathan, fondateur de la méthode RESET" width="665" height="831" loading="lazy">
     </div>
-    <div>
+    <div class="reveal">
       <span class="eyebrow">Qui je suis</span>
       <h2>Je m'appelle Nathan. J'ai vécu 10 ans dans l'addiction.</h2>
       <p>Un jour, j'ai accepté de l'aide. Je suis parti dans un centre de réhabilitation à l'étranger, où j'ai passé deux mois comme patient. Puis j'y suis resté, de l'autre côté : j'y ai travaillé pendant deux ans, aux côtés de personnes qui vivaient ce que j'avais vécu.</p>
@@ -149,11 +141,11 @@
 
 <section class="section section--soft">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Ce que je propose</span>
       <h2>Trois façons d'avancer, à ton rythme</h2>
     </div>
-    <div class="grid grid-3">
+    <div class="grid grid-3 stagger">
       <article class="card">
         <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/><path d="M9 7h7M9 11h5"/></svg></div>
         <h3>La méthode RESET</h3>
@@ -179,7 +171,7 @@
 
 <section class="section">
   <div class="container">
-    <div class="notice notice--warm" style="padding:36px 28px">
+    <div class="notice notice--warm reveal" style="padding:36px 28px">
       <span class="eyebrow">Tu es un proche ?</span>
       <h2>Tu n'es pas responsable de son addiction. Mais tu la vis aussi.</h2>
       <p class="lead">Tous les jours, parfois en silence. Tu as le droit d'être aidé, même si la personne que tu aimes n'est pas prête à changer.</p>
@@ -193,11 +185,11 @@
 
 <section class="section section--dark section--image" style="background-image:linear-gradient(180deg,rgba(98,46,26,.92),rgba(98,46,26,.8)),url('/assets/img/ocean-nuit.jpg')">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="eyebrow">Bientôt</span>
       <h2>Ce qui arrive chez RESET</h2>
     </div>
-    <div class="grid grid-2" style="margin-bottom:40px">
+    <div class="grid grid-2 stagger" style="margin-bottom:40px">
       <article class="card card--dark">
         <span class="tag">Bientôt</span>
         <h3>Le podcast RESET</h3>
@@ -224,11 +216,13 @@
   </div>
 </section>
 
-<section class="section section--sun center">
+<section class="section section--sun center final-sun">
+  <div class="final-sun-disc" aria-hidden="true"></div>
   <div class="container narrow">
-    <h2>Le premier pas, c'est juste une conversation.</h2>
+    <p class="signature" data-type="Arrêter, c'est essentiel. Mais arrêter, c'est le début.">Arrêter, c'est essentiel. Mais arrêter, c'est le début.</p>
+    <h2 class="reveal">Le premier pas, c'est juste une conversation.</h2>
     <p class="lead" style="color:#3A2A20">Tu n'as pas besoin d'avoir tout compris, ni d'être sûr de vouloir arrêter. Remplis le formulaire, je te recontacte personnellement.</p>
-    <div class="btn-row"><a class="btn btn-dark" href="https://tally.so/r/44M0qY" target="_blank" rel="noopener">Réserver mon appel gratuit</a></div>
+    <div class="btn-row reveal"><a class="btn btn-dark btn-shine" href="https://tally.so/r/44M0qY" target="_blank" rel="noopener">Réserver mon appel gratuit</a></div>
   </div>
 </section>
 </main>
@@ -280,5 +274,6 @@
 </footer>
 <a class="urgent-pill" href="/aide-urgente/" data-urgent><span class="dot" aria-hidden="true"></span>Besoin d'aide urgente ?</a>
 <script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/anim.js" defer></script>
 </body>
 </html>
