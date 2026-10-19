@@ -48,7 +48,7 @@ Les visuels d'océan (`lever-soleil-ocean.jpg`, `coucher-soleil.jpg`, `ocean-nui
 
 ## La réservation d'appel (Calendly)
 
-Tous les boutons « Réserver mon appel gratuit » mènent à ta page Calendly : https://calendly.com/nathan-klein-sgud/30min
+Tous les boutons « Réserver mon appel gratuit » mènent à ta page Calendly : https://calendly.com/nath1995888/30min
 Si tu changes de lien, remplace-le partout (rechercher / remplacer dans tous les fichiers).
 
 À régler dans Calendly :
