@@ -46,6 +46,11 @@ Format conseillé : portrait (vertical), environ 900 × 1125 pixels, en JPG, moi
 
 Les visuels d'océan (`lever-soleil-ocean.jpg`, `coucher-soleil.jpg`, `ocean-nuit.jpg`, `horizon-doux.jpg`) se remplacent de la même façon, avec de vraies photos au format paysage.
 
+## La vidéo d'accueil (VSL)
+
+La VSL est découpée en petits morceaux pour une lecture fluide (format HLS), dans `assets/video/vsl-v3/` : deux qualités (1080p et 720p), choisies automatiquement selon la connexion.
+Pour remplacer la vidéo, on crée un nouveau dossier (par exemple `vsl-v4`) et on change le lien `data-src` dans `index.html` : les visiteurs voient tout de suite la nouvelle version, sans attendre que leur cache se vide.
+
 ## La réservation d'appel (Calendly)
 
 Tous les boutons « Réserver mon appel gratuit » mènent à ta page Calendly : https://calendly.com/nath1995888/30min
