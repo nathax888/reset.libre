@@ -51,16 +51,17 @@ Les visuels d'océan (`lever-soleil-ocean.jpg`, `coucher-soleil.jpg`, `ocean-nui
 La VSL est découpée en petits morceaux pour une lecture fluide (format HLS), dans `assets/video/vsl-v3/` : deux qualités (1080p et 720p), choisies automatiquement selon la connexion.
 Pour remplacer la vidéo, on crée un nouveau dossier (par exemple `vsl-v4`) et on change le lien `data-src` dans `index.html` : les visiteurs voient tout de suite la nouvelle version, sans attendre que leur cache se vide.
 
-## La réservation d'appel (Calendly)
+## Le formulaire d'appel (Tally)
 
-Tous les boutons « Réserver mon appel gratuit » mènent à ta page Calendly : https://calendly.com/nath1995888/30min
-Si tu changes de lien, remplace-le partout (rechercher / remplacer dans tous les fichiers).
+Tous les boutons « Réserver mon appel gratuit » mènent à ton formulaire Tally : https://tally.so/r/44M0qY
+Si tu changes de formulaire, remplace ce lien partout (rechercher / remplacer dans tous les fichiers).
 
-À régler dans Calendly :
-- **Lieu de l'appel** : ajoute Google Meet (ou la visio de ton choix) pour que le lien soit envoyé automatiquement.
-- **Questions de réservation** : reste léger (prénom, email, et une question facultative « Où en es-tu en quelques mots ? »).
-- **Confirmation** : un message court et humain, par exemple :
-  « Merci d'avoir fait ce premier pas. Je sais que ce n'est pas toujours facile. À très vite, Nathan »
+À régler dans Tally :
+- **Notifications email** : Formulaire › Settings › Notifications › « Self email notifications » : active-le pour recevoir chaque réponse par email.
+- **Message de confirmation** : Settings › « Thank you page ». Exemple :
+  « Merci de m'avoir écrit. Je sais que ce premier pas n'est pas toujours facile. Je lis ton message personnellement et je te recontacte très vite pour fixer notre appel. Nathan »
+- **Case de consentement (RGPD, important)** : ajoute une case à cocher obligatoire :
+  « J'accepte que Nathan (RESET) utilise ces informations, y compris ce que je partage sur ma situation, pour me recontacter. Voir la politique de confidentialité. » avec un lien vers la page `/confidentialite/` du site.
 
 ## Le formulaire « Préviens-moi » (livre, podcast)
 
